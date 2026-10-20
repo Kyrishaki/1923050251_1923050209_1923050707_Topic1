@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Study Planner",
+    "slug": "study-planner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "studyplanner",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Ứng dụng cần máy ảnh để chụp ảnh ghi chú bài học hoặc bảng viết.",
+        "NSPhotoLibraryUsageDescription": "Ứng dụng cần truy cập thư viện ảnh để đính kèm hình ảnh vào bài tập."
+      }
+    },
+    "android": {
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Ứng dụng cần truy cập thư viện ảnh để đính kèm hình ảnh ghi chú bài học.",
+          "cameraPermission": "Ứng dụng cần máy ảnh để chụp ảnh ghi chú bài học hoặc bảng viết.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-secure-store",
+      "expo-image"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
